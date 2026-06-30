@@ -72,7 +72,8 @@
   .logo{
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:1.15rem;
+    font-size:1.05rem;
+    white-space:nowrap;
   }
   .logo span{color:var(--coral);}
   .navlinks{
@@ -454,7 +455,6 @@
   }
   .project-meta{
     display:flex;
-    justify-content:space-between;
     align-items:center;
     border-top:1px solid var(--line);
     padding-top:16px;
@@ -464,16 +464,6 @@
     color:var(--ink);
     font-weight:500;
   }
-  .project-link{
-    font-size:0.84rem;
-    font-weight:600;
-    color:var(--coral);
-    text-decoration:none;
-    display:inline-flex;
-    align-items:center;
-    gap:5px;
-  }
-  .project-link:hover{text-decoration:underline;}
 
   /* ---------- SERVICES ---------- */
   .services-grid{
@@ -686,7 +676,7 @@
 
 <header>
   <nav>
-    <div class="logo">automate<span>.flow</span></div>
+    <div class="logo">Joseph Rey<span> Cabantan</span></div>
     <ul class="navlinks">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -785,7 +775,7 @@
   </section>
 
   <!-- PROJECTS / n8n SHOWCASE -->
-  <section id="projects">
+  <section id="projects" style="padding-bottom:40px;">
     <div class="wrap">
       <div class="section-head">
         <span class="mono">// 02 — n8n workflows</span>
@@ -816,7 +806,6 @@
             </div>
             <div class="project-meta">
               <span class="project-impact">No staff needed to take bookings</span>
-              <a href="#" class="project-link">View case study →</a>
             </div>
           </div>
         </div>
@@ -842,7 +831,6 @@
             </div>
             <div class="project-meta">
               <span class="project-impact">Zero missed reorders</span>
-              <a href="#" class="project-link">View case study →</a>
             </div>
           </div>
         </div>
@@ -868,7 +856,6 @@
             </div>
             <div class="project-meta">
               <span class="project-impact">Feedback reaches the right team instantly</span>
-              <a href="#" class="project-link">View case study →</a>
             </div>
           </div>
         </div>
@@ -894,7 +881,6 @@
             </div>
             <div class="project-meta">
               <span class="project-impact">Multi-day sequence, zero manual follow-up</span>
-              <a href="#" class="project-link">View case study →</a>
             </div>
           </div>
         </div>
@@ -920,7 +906,6 @@
             </div>
             <div class="project-meta">
               <span class="project-impact">Always-on reporting, no manual pulls</span>
-              <a href="#" class="project-link">View case study →</a>
             </div>
           </div>
         </div>
@@ -946,7 +931,6 @@
             </div>
             <div class="project-meta">
               <span class="project-impact">Instant lead-to-listing matching</span>
-              <a href="#" class="project-link">View case study →</a>
             </div>
           </div>
         </div>
@@ -956,7 +940,7 @@
   </section>
 
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" style="padding-top:40px;">
     <div class="wrap">
       <div class="section-head">
         <span class="mono">// 03 — how I can help</span>
@@ -988,8 +972,8 @@
       <h2>Let's build something that <em>runs itself.</em></h2>
       <p>Open to automation and AI integration roles — happy to walk through any of these workflows in detail.</p>
       <div class="contact-actions">
-        <a href="mailto:hello@example.com" class="btn btn-primary">hello@example.com</a>
-        <a href="#" class="btn btn-ghost">View resume</a>
+        <a href="mailto:sephcabantan@gmail.com" class="btn btn-primary">sephcabantan@gmail.com</a>
+        <a href="Joseph_Rey_Cabantan_Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View resume</a>
       </div>
       <div class="social-row">
         <a href="#">LinkedIn</a>
