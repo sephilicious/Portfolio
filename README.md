@@ -18,6 +18,7 @@ This is a static site — no build step required. You can preview it locally by 
 ```
 .
 ├── index.html                          # Single-page site (all CSS/JS inline)
+├── favicon.svg                          # Site favicon
 ├── Joseph_Rey_Cabantan_Resume.pdf       # Linked from the "View resume" button
 └── images/                              # Workflow screenshots used in the Projects section
     ├── booking-bot.png

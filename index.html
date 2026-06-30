@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Automation Specialist — Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -530,12 +531,25 @@
   .social-row{
     margin-top:46px;
     display:flex;
+    flex-wrap:wrap;
     justify-content:center;
-    gap:28px;
+    align-items:center;
+    gap:10px 20px;
     font-size:0.88rem;
   }
-  .social-row a{text-decoration:none; color:rgba(243,241,234,0.7);}
+  .social-row a{text-decoration:none; color:rgba(243,241,234,0.7); position:relative;}
   .social-row a:hover{color:var(--coral);}
+  .social-row a:not(:last-child)::after{
+    content:'';
+    position:absolute;
+    right:-11px;
+    top:50%;
+    transform:translateY(-50%);
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:rgba(243,241,234,0.35);
+  }
 
   footer{
     background:var(--ink);
@@ -976,9 +990,10 @@
         <a href="Joseph_Rey_Cabantan_Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View resume</a>
       </div>
       <div class="social-row">
-        <a href="https://www.linkedin.com/in/joseph-rey-cabantan-436278412/">LinkedIn</a>
-        <a href="https://github.com/sephilicious">GitHub</a>
-      
+        <a href="https://www.linkedin.com/in/joseph-rey-cabantan-436278412/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/sephilicious" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.upwork.com/freelancers/~016c2bcfc2d6aa6953?mp_source=share" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/5041154" target="_blank" rel="noopener">OnlineJobs.ph</a>
       </div>
     </div>
   </section>
