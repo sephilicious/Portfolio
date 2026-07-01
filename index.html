@@ -318,6 +318,16 @@
     font-size:2.3rem;
     color:var(--coral);
     font-weight:600;
+    display:inline-block;
+    transition:transform 0.2s ease;
+  }
+  .stat-card .num.counted{
+    animation:num-land 0.35s ease;
+  }
+  @keyframes num-land{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.12);}
+    100%{transform:scale(1);}
   }
   .stat-card .label{
     margin-top:6px;
@@ -1248,7 +1258,70 @@
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-  targets.forEach(el => observer.observe(el));
+    targets.forEach(el => observer.observe(el));
+})();
+
+// ---------- STAT COUNTER ----------
+(function(){
+  const nums = document.querySelectorAll('.stat-grid .num');
+  if (!nums.length) return;
+
+  // Parse each element's target value and suffix
+  const stats = Array.from(nums).map(el => {
+    const raw = el.textContent.trim();
+    const suffix = raw.replace(/[\d.]/g, '');     // e.g. '%', '+'
+    const value  = parseFloat(raw.replace(/[^0-9.]/g, ''));
+    return { el, value, suffix, done: false };
+  });
+
+  function easeOut(t){ return 1 - Math.pow(1 - t, 3); }
+
+  function runCounters(){
+    const duration = 1200;
+    const start = performance.now();
+
+    function tick(now){
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOut(progress);
+
+      stats.forEach(s => {
+        if (s.done) return;
+        const current = Math.round(eased * s.value);
+        s.el.textContent = current + s.suffix;
+        if (progress >= 1){
+          s.el.textContent = s.value + s.suffix;
+          s.el.classList.add('counted');
+          s.done = true;
+        }
+      });
+
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  // Trigger when the stat-grid gains is-visible
+  const statGrid = document.querySelector('.stat-grid');
+  if (!statGrid) return;
+
+  if (!('IntersectionObserver' in window)){
+    runCounters();
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        // Small delay so the card stagger reveals start first
+        setTimeout(runCounters, 250);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  observer.observe(statGrid);
 })();
 </script>
 
