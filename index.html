@@ -870,7 +870,17 @@
               <h3>AI Restaurant Booking Automation</h3>
               <span class="project-tag">n8n + Gemini</span>
             </div>
-            <p class="project-desc">A chat-based AI agent handles table booking conversations end-to-end — reading availability and writing new reservations straight to the sheet, with memory so it can hold context across the back-and-forth.</p>
+            <p class="project-desc">I built an AI-powered restaurant booking automation using n8n and Google Gemini. Customers can book a table by sending their name, date, time, and number of guests in chat.
+
+The AI agent extracts the data, checks availability in Google Sheets, prevents double bookings, and confirms reservations automatically.
+
+The workflow includes:
+Chat
+Google Gemini model
+Memory buffer
+Google Sheets integration
+
+The system ensures bookings are only added if the time slot is available and never overwrites existing reservations.</p>
             <div class="flow-chain">
               <span class="flow-node trigger">Chat Message</span>
               <span class="flow-arrow"></span>
@@ -895,7 +905,7 @@
               <h3>Automated Inventory Monitoring & Low Stock Alert System</h3>
               <span class="project-tag">n8n + Gemini</span>
             </div>
-            <p class="project-desc">Runs on a schedule, pulls stock levels from the sheet, filters down to items running low, and has an AI agent draft and send a reorder alert by email — fully unattended.</p>
+            <p class="project-desc">I built an automated inventory monitoring system using n8n, Google Sheets, and Google Gemini. The workflow runs weekly, checks stock levels against predefined thresholds, and detects low-stock items automatically. When inventory falls below the limit, the system aggregates affected products and sends a structured alert via Gmail. This automation prevents stockouts, reduces manual checks, and improves purchasing efficiency.</p>
             <div class="flow-chain">
               <span class="flow-node trigger">Schedule</span>
               <span class="flow-arrow"></span>
@@ -920,7 +930,7 @@
               <h3>AI Customer Feedback Classification & Routing System</h3>
               <span class="project-tag">n8n + Gemini</span>
             </div>
-            <p class="project-desc">New feedback rows trigger an AI categorization step that reads and normalizes the comment, then routes it by area — kitchen, delivery, or service — straight to the right team's inbox.</p>
+            <p class="project-desc">I built an AI-powered feedback automation system using n8n and Google Gemini. When a new row is added to Google Sheets, the workflow analyzes the customer’s feedback, classifies it by category (question, problem, suggestion) and area (kitchen, delivery, service), then updates the sheet automatically. Based on classification, the system routes notifications to the appropriate department via Gmail, enabling faster response and structured feedback management.</p>
             <div class="flow-chain">
               <span class="flow-node trigger">Sheets Row Added</span>
               <span class="flow-arrow"></span>
@@ -945,7 +955,7 @@
               <h3>Automated Client Onboarding & CRM Workflow</h3>
               <span class="project-tag">n8n + HubSpot</span>
             </div>
-            <p class="project-desc">A Jotform submission kicks off validation, creates the contact in HubSpot, notifies the team, and runs a multi-day follow-up sequence across email and Telegram — keeping every new client moving without manual chasing.</p>
+            <p class="project-desc">I built a fully automated client onboarding system using n8n. When a form is submitted via Jotform, the workflow validates input data, creates a contact in HubSpot CRM, and sends structured team notifications via Telegram. The system delivers welcome emails, loyalty guides, timed follow-up offers, and status updates automatically. It also updates CRM stages and alerts the team when onboarding is complete, ensuring a smooth and professional customer journey.</p>
             <div class="flow-chain">
               <span class="flow-node trigger">Jotform Submit</span>
               <span class="flow-arrow"></span>
@@ -970,7 +980,7 @@
               <h3>ERP Order Analytics & Reporting Automation</h3>
               <span class="project-tag">n8n + Discord</span>
             </div>
-            <p class="project-desc">Runs on a schedule, pulls live order data from an internal ERP endpoint, checks it against a condition, then either logs it to a tracking record or transforms it in code and posts a formatted report straight to Discord.</p>
+            <p class="project-desc">I built an analytics automation workflow using n8n that connects to a custom ERP system via HTTP request. The system filters processing orders, stores structured data in Airtable, calculates weekly order totals and revenue using JavaScript, and automatically sends performance summaries to Discord. This workflow provides real-time order tracking, structured data storage, and automated reporting for better operational visibility and decision-making.</p>
             <div class="flow-chain">
               <span class="flow-node trigger">Schedule</span>
               <span class="flow-arrow"></span>
@@ -995,7 +1005,7 @@
               <h3>AI Real Estate Lead & Property Matching System</h3>
               <span class="project-tag">n8n + Gemini</span>
             </div>
-            <p class="project-desc">New leads come in by webhook and are validated, logged, and handed to an AI agent that searches the property database to match listings against the lead's criteria — replying with relevant matches and a fallback path for anything that needs a human.</p>
+            <p class="project-desc">I built an AI-powered real estate system using n8n, Airtable, and Google Gemini. The workflow captures property inquiries via webhook, stores seller data in Airtable, and notifies agents automatically. For buyers, an AI agent analyzes property descriptions, searches Airtable records, and confirms availability using structured tool calls. The system also logs voice call summaries and costs, enabling intelligent lead tracking and automated property management.</p>
             <div class="flow-chain">
               <span class="flow-node trigger">Webhook Lead</span>
               <span class="flow-arrow"></span>
